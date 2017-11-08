@@ -1,0 +1,14 @@
+@import './base.css';
+
+
+body {
+    background-color:#222d32;
+}
+
+.panel-primary h4 {
+    text-align: center;
+}
+
+.container {
+    margin-top: 150px;
+}
