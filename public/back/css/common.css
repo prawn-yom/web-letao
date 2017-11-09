@@ -14,3 +14,7 @@
 .fr {
     float: right;
 }
+
+.panel-heading h4 {
+    text-align: center
+}
