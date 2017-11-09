@@ -26,6 +26,9 @@ $(function () {
                 validators: {
                     notEmpty: {
                         message: '用户名不能为空'
+                    },
+                    callback:{
+                        message:'用户名错误'
                     }
                 }
             },
@@ -33,6 +36,9 @@ $(function () {
                 validators: {
                     notEmpty: {
                         message: '密码不能为空'
+                    },
+                    callback:{
+                        message:'密码错误'
                     },
                     stringLength: {
                         min: 6,
@@ -62,13 +68,27 @@ $(function () {
                     location.href = 'index.html';
                 }
                 if (data.error === 1000) {
-                   alert('账号错误啦');
+                    //    alert('账号错误啦');
+                    //使用updateStatus方法，主动把username这个字段变成校验失败
+                    //第一个参数：字段名  表单中的name属性
+                    //第二个参数：INVALID :校验失败 
+                                // NOT_VALIDATED :未校验的
+                                // VALIDATING:校验中的
+                                // VALID:校验成功的
+                    //第三个参数：配置提示消息  可以再 配置规则的那里配置 传到这里来
+                    $form.data("bootstrapValidator").updateStatus("username", "INVALID", "callback");
                 }
                 if (data.error === 1001) {
-                    alert('密码错误啦');
+                    $form.data("bootstrapValidator").updateStatus("password", "INVALID", "callback");
                 }
             }
         });
     });
 
+    // 表单重置功能
+    // 获取到 重置 按钮
+    $('[type="reset"]').on('click', function () {
+        // 调用 bootstrapValidator 中的 resetForm() 方法 重置表单功能
+        $form.data("bootstrapValidator").resetForm();
+    })
 })
