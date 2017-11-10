@@ -28,8 +28,20 @@ $(function () {
     // 退出功能
     $('.btn_logout').on('click', function () {
         // 显示模态框
-        $('#logoutModal').modal('show');
-        
+        $('#logoutModal').modal('show');  
+        // off() 不传参数是解绑所有时间
+        // off('click') 只解绑click 时间
+        // off('click', '**') 只解绑委托时间
+        $('.btn_confirm').off().on('click', function () {
+            $.ajax({
+                type:'get',
+                url:'/employee/employeeLogout',
+                success:function (data) {
+                    if(data.success){
+                        location.href = 'login.html';
+                    }
+                }
+            })
+        })
     })
-
 })
