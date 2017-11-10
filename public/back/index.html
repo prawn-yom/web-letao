@@ -32,7 +32,7 @@
         <div class="nav">
             <ul>
                 <li>
-                    <a href="user.html"  class="now">
+                    <a href="user.html" class="now">
                         <i class="glyphicon glyphicon-user"></i>
                         用户管理
                     </a>
@@ -42,7 +42,7 @@
                         <i class="glyphicon glyphicon-list"></i>
                         分类管理
                     </a>
-                    <div class="child">
+                    <div class="child" style="display:none;">
                         <a href="firth.html">一级分类</a>
                         <a href="firth.html">二级分类</a>
                     </div>
@@ -59,7 +59,23 @@
 
 
     <!-- 右边的内容 -->
-    <div class="yc_main"></div>
+    <div class="yc_main">
+        <!-- 顶部通栏 -->
+        <div class="topbar">
+            <a href="javascript:;" class="pull-left btn_menu"><i class="glyphicon glyphicon-align-justify "></i></a>
+            <a href="javascript:;" class="pull-right btn_logout"><i class="glyphicon glyphicon-log-out "></i></a>
+        </div>
+
+        <!-- 为了让内容左右有padding间距 所以使用了bootstrap这个container-fluid盒子 因为它有左右15px的padding间距 -->
+        <div class="container-fluid">
+            <!-- 面包屑导航(路径导航) -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+            </ol>
+        </div>
+    </div>
 
 
 

@@ -32,6 +32,7 @@ a:link,a:visited,a:hover,a:active {
     width: 180px;
     height: 100%;
     background-color: #222d32;
+    position: absolute;
 }
 /* 品牌标题 */
 .yc_aside .brand a {
@@ -83,4 +84,24 @@ a:link,a:visited,a:hover,a:active {
 
 .yc_aside .nav .child a{
     padding-left: 50px;
+}
+
+/* 右边的内容区域 */
+.yc_main {
+    height: 100%;
+    /* background-color: pink; */
+    padding-left: 180px;
+}
+.yc_main .topbar {
+    height: 50px;
+    background-color: #3c8dbc;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.yc_main .topbar a {
+    color: #fff;
+    font-size: 16px;
+
 }
