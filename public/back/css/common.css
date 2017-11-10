@@ -33,7 +33,16 @@ a:link,a:visited,a:hover,a:active {
     height: 100%;
     background-color: #222d32;
     position: absolute;
+    left: 0;
+    /* 点击按钮实现 侧边栏的隐藏动画效果 */
+    transition: all 1s;
 }
+/* 为了实现 点击按钮 侧边栏隐藏的动画效果 */
+.yc_aside.now {
+    left: -180px;
+}
+
+
 /* 品牌标题 */
 .yc_aside .brand a {
     display: block;
@@ -89,9 +98,15 @@ a:link,a:visited,a:hover,a:active {
 /* 右边的内容区域 */
 .yc_main {
     height: 100%;
-    /* background-color: pink; */
     padding-left: 180px;
+    /* 点击按钮实现 侧边栏的隐藏动画效果 */
+    transition: all 1s;
 }
+/* 为了实现 点击按钮 侧边栏隐藏的动画效果 */
+.yc_main.now {
+    padding-left: 0;
+}
+
 .yc_main .topbar {
     height: 50px;
     background-color: #3c8dbc;

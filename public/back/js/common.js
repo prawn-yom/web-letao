@@ -9,3 +9,27 @@ $(document).ajaxStop(function () {
         NProgress.done();
     }, 500);
 });
+
+$(function () {
+    // 二级菜单显示隐藏
+    $('.child').prev().on('click', function () {
+        $('.child').slideToggle();        
+    });
+    
+    // 侧边栏 显示隐藏
+    $('.btn_menu').on('click', function () {
+        // 加上一个 now类 让 .yc_aside 的left变成 -180px
+        $('.yc_aside').toggleClass('now');
+        // 加上一个 now类 让 .yc_main 这个的padding-left为0；
+        $('.yc_main').toggleClass('now');
+        
+    })
+
+    // 退出功能
+    $('.btn_logout').on('click', function () {
+        // 显示模态框
+        $('#logoutModal').modal('show');
+        
+    })
+
+})
