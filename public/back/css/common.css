@@ -2,6 +2,17 @@
     padding: 0;
     margin: 0;
 }
+html,body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+}
 
 .login_bg {
     background-color: #222d32;
@@ -14,4 +25,62 @@
 
 .panel-heading h4 {
     text-align: center
+}
+
+/* 首页 */
+.yc_aside {
+    width: 180px;
+    height: 100%;
+    background-color: #222d32;
+}
+/* 品牌标题 */
+.yc_aside .brand a {
+    display: block;
+    width: 180px;
+    height: 50px;
+    background-color: #367fa9;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+/* 用户信息 */
+.yc_aside .user {
+    width: 180px;
+    height: 150px;
+}
+.yc_aside .user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 30px auto 0;
+}
+
+.yc_aside .user p {
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+/* 导航栏 */
+.yc_aside .nav a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #ddd;
+    padding-left: 34px;
+    border: 3px solid transparent;
+}
+.yc_aside .nav a.now {
+    border-left-color: #069;
+    background-color: #1d1f21;
+    color: #fff;
+}
+
+.yc_aside .nav .child a{
+    padding-left: 50px;
 }

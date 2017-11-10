@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>乐淘管理系统-首页</title>
+    <!-- 引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 引入 bootstrap-validator 的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
+    <!-- 引入进度条css文件 -->
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <!-- 引入自己的css文件 -->
+    <link rel="stylesheet" href="./css/common.css">
 </head>
+
 <body>
-    <h4>哈哈哈</h4>
+    <!-- 左边的侧边栏 -->
+    <div class="yc_aside">
+        <!-- 品牌标题 -->
+        <div class="brand">
+            <a href="index.html">prawn-yom</a>
+        </div>
+        <!-- 用户信息 -->
+        <div class="user">
+            <img src="./images/timg (1).jpg" alt="">
+            <p>super管理员</p>
+        </div>
+        <!-- 导航栏 -->
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="user.html"  class="now">
+                        <i class="glyphicon glyphicon-user"></i>
+                        用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="glyphicon glyphicon-list"></i>
+                        分类管理
+                    </a>
+                    <div class="child">
+                        <a href="firth.html">一级分类</a>
+                        <a href="firth.html">二级分类</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="product.html">
+                        <i class="glyphicon glyphicon-tags"></i>
+                        商品管理
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 右边的内容 -->
+    <div class="yc_main"></div>
+
+
+
+
+
+    <!-- 引入jQuery文件 -->
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <!-- 引入bootstrap的js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 引入 bootstrap-validator 的js文件 -->
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+    <!-- 引入 nprogress 的js文件 -->
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
