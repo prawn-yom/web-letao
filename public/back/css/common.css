@@ -1,3 +1,4 @@
+/* 初始化 */
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +14,12 @@ a {
 a:link,a:visited,a:hover,a:active {
     text-decoration: none;
 }
+
+.table.table-bordered td {
+    text-align: center;
+    vertical-align: middle;
+}
+
 
 .login_bg {
     background-color: #222d32;
@@ -118,5 +125,4 @@ a:link,a:visited,a:hover,a:active {
 .yc_main .topbar a {
     color: #fff;
     font-size: 16px;
-
 }
