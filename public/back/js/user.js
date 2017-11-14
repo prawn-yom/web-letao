@@ -39,5 +39,36 @@ $(function () {
     render();
 
     // 启用禁用功能
-    $()
+    $('tbody').on('click','.btn',function () {
+        // 开启模态框
+        $('#userModal').modal('show');   
+        // alert('hehe');
+        // 获取绑定好的id
+        var id = $(this).parent().data('id');
+        // console.log(id);
+        var isDelete = $(this).hasClass('btn-danger')? 0:1;
+
+        $('.btn_edit').off().on('click', function () {
+            // console.log('hehe');
+            $.ajax({
+                type: "post",
+                url: "/user/updateUser",
+                data: {
+                    id : id,
+                    isDelete : isDelete
+                },
+                success: function (data) {
+                    // console.log(data);
+                    // 如果操作成功 data.success 会显示 为 true
+                    if(data.success){
+                        // 操作成功 模态框关闭
+                        $('#userModal').modal('hide');
+                        // 重新渲染
+                        render();
+                    }
+                }
+            });
+        })
+    })
+
 })
